@@ -41,7 +41,7 @@ To reproduce the results in the "modernization" of ResNet (Section 2) on ImageNe
 
 The commands use [submitit](https://github.com/facebookincubator/submitit) for submitting jobs to SLURM clusters. You may need to change cluster specific arguments in `run_with_submitit.py`. If you wish to run on a single machine, replace the first line of each command with 
 ```bash
-python -m torch.distributed.launch --nproc_per_node=8 run_classification.py --data_path IMNET_PATH --update_freq 4
+python -m torch.distributed.launch --nproc_per_node=8 run_classification.py --data_path IMNET_PATH --update_freq 4 \
 ```
 
 Please set `JOB_DIR` to a desired folder name under `checkpoint/` for saving the log and checkpoints, and `IMNET_PATH` to path to ImageNet-1K.
